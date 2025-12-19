@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Bottleneck Analyzer Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #202124;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header */
+        .header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e8eaed;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, #3ecfb2 0%, #7c5cff 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(62, 207, 178, 0.3);
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: #202124;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        
+        .nav-links a {
+            color: #5f6368;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #1a73e8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 24px;
+            text-align: center;
+        }
+        
+        .app-icon {
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, #3ecfb2 0%, #7c5cff 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(62, 207, 178, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: #202124;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, #3ecfb2, #7c5cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            color: #5f6368;
+            margin-bottom: 48px;
+            max-width: 500px;
+        }
+        
+        /* Download Button */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #3ecfb2 0%, #2ba88f 100%);
+            color: #fff;
+            padding: 18px 48px;
+            border-radius: 100px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(62, 207, 178, 0.4);
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px rgba(62, 207, 178, 0.5);
+        }
+        
+        .download-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+        
+        .platform-info {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #80868b;
+        }
+        
+        /* Features Strip */
+        .features-strip {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 64px;
+            padding: 32px;
+            background: #f8f9fa;
+            border-radius: 16px;
+            max-width: 800px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #5f6368;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .feature-item svg {
+            width: 24px;
+            height: 24px;
+            color: #3ecfb2;
+        }
+        
+        /* Other Downloads */
+        .other-downloads {
+            margin-top: 48px;
+        }
+        
+        .other-downloads-title {
+            font-size: 14px;
+            color: #80868b;
+            margin-bottom: 16px;
+        }
+        
+        .download-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+        }
+        
+        .download-link {
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        
+        .download-link:hover {
+            color: #174ea6;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 24px;
+            text-align: center;
+            border-top: 1px solid #e8eaed;
+            background: #f8f9fa;
+        }
+        
+        .footer p {
+            font-size: 12px;
+            color: #80868b;
+        }
+        
+        .footer a {
+            color: #5f6368;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .features-strip { 
+                flex-direction: column; 
+                gap: 20px;
+                align-items: center;
+            }
+            .download-links { flex-direction: column; gap: 12px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">
+            <div class="logo-icon">BA</div>
+            <span class="logo-text">Bottleneck Analyzer</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="https://github.com/NostalgiaCoconut/bottleneck-analyzer-Pro">GitHub</a>
+            <a href="#help">Help</a>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <main class="hero">
+        <div class="app-icon">BA</div>
+        
+        <h1>The analyzer<br>built to be <span>powerful</span></h1>
+        
+        <p class="hero-subtitle">
+            Advanced manufacturing bottleneck analysis. 
+            Handle 225,000+ records with ease.
+        </p>
+        
+        <a href="https://github.com/NostalgiaCoconut/bottleneck-analyzer-Pro/releases/download/v4.0.0/win-unpacked.zip" class="download-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            Download Analyzer
+        </a>
+        
+        <p class="platform-info">For Windows 11/10 64-bit</p>
+        
+        <!-- Features Strip -->
+        <div class="features-strip">
+            <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                225K+ Records
+            </div>
+            <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                13 Chart Types
+            </div>
+            <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                100% Offline
+            </div>
+            <div class="feature-item">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                Free Forever
+            </div>
+        </div>
+        
+        <!-- Other Downloads -->
+        <div class="other-downloads">
+            <p class="other-downloads-title">Other platforms</p>
+            <div class="download-links">
+                <a href="#" class="download-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    macOS
+                </a>
+                <a href="#" class="download-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Linux
+                </a>
+                <a href="https://github.com/NostalgiaCoconut/bottleneck-analyzer-Pro/releases" class="download-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    All Releases
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            Bottleneck Analyzer Pro v4.0.0 · 
+            <a href="https://github.com/NostalgiaCoconut/bottleneck-analyzer-Pro">View on GitHub</a> · 
+            <a href="#">Privacy</a> · 
+            <a href="#">Terms</a>
+        </p>
+    </footer>
+</body>
+</html>
